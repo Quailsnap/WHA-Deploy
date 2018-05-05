@@ -54,6 +54,7 @@ if (_unit getVariable 'WHA_DP_HASDEPLOY') exitWith {};
 						if WHA_DP_ISDEPLOYED then
 						{
 							[player, 1,['ACE_SelfActions','deploy']] call ace_interact_menu_fnc_removeActionFromObject;
+							player setVariable ['WHA_DP_HASDEPLOY',false,true];
 						};
 					};
 				},

@@ -1,7 +1,7 @@
 Design Doc: WH Deploy
 This thing's brand new. Bear with me.
 ======================
-v0.1 <-- Current
+v0.0.1 <-- Current
 - System can be turned on and off with a variable.
 - Functions are compiled within init.
 - Add deploy function to group leader if not already present.
@@ -11,7 +11,7 @@ Issues:
 - Players can deploy into rock props.
 - (Can't reproduce?) players deploying exactly on a coastline die.
 
-v0.2
+v0.1.1
 - Implement new canDeploy function.
 - Action will not be added unless canDeploy.
 - Detect mission type for canDeploy.
