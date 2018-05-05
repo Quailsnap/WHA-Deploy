@@ -1,0 +1,23 @@
+Design Doc: WH Deploy
+This thing's brand new. Bear with me.
+======================
+v0.1 <-- Current
+- System can be turned on and off with a variable.
+- Functions are compiled within init.
+- Add deploy function to group leader if not already present.
+- Fade all group members to black, teleport to location.
+- Remove action from group leader.
+Issues:
+- Players can deploy into rock props.
+- (Can't reproduce?) players deploying exactly on a coastline die.
+
+v0.2
+- Implement new canDeploy function.
+- Action will not be added unless canDeploy.
+- Detect mission type for canDeploy.
+- Detect if Safestart is on for canDeploy, ie -- JIP cannot deploy.
+- Only SHOW action once Safestart has ended.
+- Add HALO option with configurable height.
+- Disperse players randomly in a radius upon deploy to avoid colliding.
+- Change hints to use prettier ACE structured text.
+- If markers of a certain name are present, players may only deploy within those markers.
