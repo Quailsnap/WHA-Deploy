@@ -16,7 +16,7 @@
 params["_unit"];
 
 //	Exits if deploy action already present.
-if (_unit getVariable 'WHA_DP_HASDEPLOY') exitWith {};
+if (_unit getVariable ['WHA_DP_HASDEPLOY', false]) exitWith {};
 
 // If deploy action not present, ensures code is running local to unit . . .
 [[_unit],

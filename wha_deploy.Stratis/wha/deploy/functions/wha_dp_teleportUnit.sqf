@@ -13,7 +13,7 @@
 //	Parameters
 //		- unit = unit whose group will be moved
 //		- position = position AGLS to be moved to
-params["_unit","_position"];
+params["_position", "_unit"];
 
-// Send code to client machine.
-[_position] remoteExec ["wha_dp_fnc_teleportLocal", owner _unit];
+// Tell client machine to fade and teleport itself locally.
+[_position, _unit] remoteExec ["wha_dp_fnc_teleportLocal", owner _unit];

@@ -13,18 +13,29 @@
 //	Parameters
 //		- unit = unit whose group will be moved
 //		- position = position AGLS to be moved to
-params["_unit","_position"];
+params["_position", "_unit", ["_dispersion",-1]];
 
-// TODO - remove debug
-//diag_log _unit;
-
+//	Get units in group of parameter unit.
 _units = units group _unit;
+
+// If dispersion not passed through, use global default
+if ( _dispersion < 0 ) then
+{ _dispersion = WHA_DP_DISPERSION; };
 
 // Iterate through units in group of unit . . .
 {
 	// Randomize target position with dispersion
-	// TODO
+	_randomDispersion = random[0,(_dispersion-_dispersion/3),_dispersion];
+	_randomDirection = random 360;
+		
+	// Get new position
+	_position = _position getPos [_randomDispersion, _randomDirection];
 	
-	// Teleport each unit.
-	[_x,_position] call wha_dp_fnc_teleportUnit;
+	// If the unit is in a vehicle, only teleport them if they are the
+	// lead unit in the vehicle.
+	_unit_not_in_vehicle = (isNull objectParent _unit);
+	_unit_commands_vehicle = (_unit == effectiveCommander objectParent _unit);
+	if ( _unit_not_in_vehicle || _unit_commands_vehicle )
+	then { [_position, _x] call wha_dp_fnc_teleportUnit; };
+	// TODO - tell everyone that this vehicle will deploy
 } forEach _units;

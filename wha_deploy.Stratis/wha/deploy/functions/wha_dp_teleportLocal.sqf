@@ -13,12 +13,13 @@
 
 //	Parameters
 //		- position = position AGLS to be moved to
-params["_position"];
+//		- unit (optional, default player) = unit to teleport
+params["_position", ["_unit", player]];
 
 // Create scheduled environment that can pause
-_null = [_position] spawn
+_null = [_position, _unit] spawn
 {
-	params["_position"];
+	params["_position", "_unit"];
 	
 	//	Count down
 	// TODO - Do I need to spawn this separately?
@@ -42,7 +43,9 @@ _null = [_position] spawn
 	};
 	
 	// Teleport
-	player setPos _position;
+	if ( isNull objectParent _unit ) 
+	then { _unit setPos _position; }
+	else { (objectParent _unit) setPos _position };
 
 	// Fade back in
 	titleText["", "BLACK IN", 3];

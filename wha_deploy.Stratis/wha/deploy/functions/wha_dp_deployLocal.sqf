@@ -21,7 +21,7 @@ hint format["%1","DEPLOY:\nClick on the map to deploy group.\nClose the map to c
 // Establish code that will be executed upon click
 _onMapClick =
 {
-	[player,_pos] call wha_dp_fnc_teleportGroup;
+	[_pos, player] call wha_dp_fnc_teleportGroup;
 	// Remove click EH
 	["wha_dp_eh_mapclick", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 	// Close map

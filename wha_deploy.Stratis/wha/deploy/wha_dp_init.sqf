@@ -81,6 +81,7 @@ waitUntil {!isNull (findDisplay 46)};
 //	Add deploy self-interact or action to group leader if they do not have it already.
 // TODO
 //if ( [player] call wha_dp_fnc_canDeploy ) then { 
+// waituntil safestart
 [player] call wha_dp_fnc_addDeployGroup;
 //};
 

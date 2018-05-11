@@ -1,7 +1,7 @@
 Design Doc: WH Deploy
 This thing's brand new. Bear with me.
 ======================
-v0.0.1 <-- Current
+v0.0.1/v0.0.2 <-- Current
 - System can be turned on and off with a variable.
 - Functions are compiled within init.
 - Add deploy function to group leader if not already present.
@@ -12,11 +12,12 @@ Issues:
 - (Can't reproduce?) players deploying exactly on a coastline die.
 
 v0.1.1
+- Make sure ground / sea vehicles deploy properly. (DONE)
 - Implement new canDeploy function.
 - Action will not be added unless canDeploy.
 - Detect mission type for canDeploy.
 - Detect if Safestart is on for canDeploy, ie -- JIP cannot deploy.
-- Only SHOW action once Safestart has ended.
+- Only add action once Safestart has ended. ( !potato_safestart_enabled )
 - Add HALO option with configurable height.
 - Disperse players randomly in a radius upon deploy to avoid colliding.
 - Change hints to use prettier ACE structured text.
