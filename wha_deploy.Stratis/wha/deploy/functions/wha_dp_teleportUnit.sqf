@@ -16,4 +16,4 @@
 params["_position", "_unit"];
 
 // Tell client machine to fade and teleport itself locally.
-[_position, _unit] remoteExec ["wha_dp_fnc_teleportLocal", owner _unit];
+[_position, _unit] remoteExec ["wha_dp_fnc_teleportLocal", _unit];

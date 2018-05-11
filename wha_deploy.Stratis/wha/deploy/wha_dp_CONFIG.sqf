@@ -19,7 +19,7 @@
 WHA_DP_DEPLOY = true;			// Enable or disable the deploy system
 								// completely. 									(true)
 
-WHA_DP_DISPERSION = 5;			// How far groups will space out upon deployment(5)
+WHA_DP_DISPERSION = 15;			// How far groups will space out upon deployment(15)
 
 								// TODO
 //WHA_DP_SIDES = [west];			// Sides to auto-add deploy system to.			(west)

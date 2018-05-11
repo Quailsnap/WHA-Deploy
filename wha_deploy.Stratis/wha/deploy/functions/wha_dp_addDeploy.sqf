@@ -48,6 +48,7 @@ if (_unit getVariable ['WHA_DP_HASDEPLOY', false]) exitWith {};
 					
 					// TODO more elegant solution
 					// Wait for unit to close map, see if unit has deployed, if so, remove action.
+					// TODO just move this to deploylocal, right?
 					_null = [] spawn
 					{
 						waitUntil{sleep 0.2; (!visibleMap)};

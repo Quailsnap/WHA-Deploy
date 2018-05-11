@@ -33,9 +33,11 @@ if ( _dispersion < 0 ) then
 	
 	// If the unit is in a vehicle, only teleport them if they are the
 	// lead unit in the vehicle.
-	_unit_not_in_vehicle = (isNull objectParent _unit);
-	_unit_commands_vehicle = (_unit == effectiveCommander objectParent _unit);
-	if ( _unit_not_in_vehicle || _unit_commands_vehicle )
-	then { [_position, _x] call wha_dp_fnc_teleportUnit; };
+	// TODO - if non-group member is commanding vehicle, deploy anyways
+	//_unit_not_in_vehicle = (isNull objectParent _unit);
+	//_unit_commands_vehicle = (_unit == effectiveCommander objectParent _unit);
+	//if ( _unit_not_in_vehicle || _unit_commands_vehicle )
+	//then { [_position, _x] call wha_dp_fnc_teleportUnit; };
+	[_position, _x] call wha_dp_fnc_teleportUnit;
 	// TODO - tell everyone that this vehicle will deploy
 } forEach _units;
