@@ -19,6 +19,7 @@ v0.1.1
 - Detect if Safestart is on for canDeploy, ie -- JIP cannot deploy.
 - Only add action once Safestart has ended. ( !potato_safestart_enabled )
 - Add HALO option with configurable height.
-- Disperse players randomly in a radius upon deploy to avoid colliding.
+- Disperse players randomly in a radius upon deploy to avoid colliding. (DONE)
+- Change dispersion depending on number of players / vehicle in group with new function.
 - Change hints to use prettier ACE structured text.
 - If markers of a certain name are present, players may only deploy within those markers.
