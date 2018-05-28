@@ -1,6 +1,6 @@
 ==========================================================================================
 
-	WHALE'S DEPLOY FUNCTION (V0.0.1 Alpha) 
+	WHALE'S DEPLOY FUNCTION (V0.0.5 Alpha) 
 	SCRIPT FOR ARMA 3
 	
 	( Future Github Link )

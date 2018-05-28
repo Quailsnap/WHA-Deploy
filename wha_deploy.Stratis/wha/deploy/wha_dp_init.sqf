@@ -82,7 +82,10 @@ waitUntil {!isNull (findDisplay 46)};
 // TODO
 //if ( [player] call wha_dp_fnc_canDeploy ) then { 
 // waituntil safestart
-[player] call wha_dp_fnc_addDeployGroup;
+//[player] call wha_dp_fnc_addDeployGroup;
+// band-aid below:
+if (leader player == player) then
+{ [player] call wha_dp_fnc_addDeploy; };
 //};
 
 //	Script tracing.
