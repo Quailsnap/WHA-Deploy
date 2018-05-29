@@ -77,4 +77,4 @@ if (_unit getVariable ['WHA_DP_HASDEPLOY', false]) exitWith {};
 	// Alert player with a hint.
 	// TODO
 	
-}] remoteExec ["bis_fnc_call", owner _unit];
+}] remoteExec ["bis_fnc_call", _unit];
